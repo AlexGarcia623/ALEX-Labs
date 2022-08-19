@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="ALEX.css">
+
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+<style>
+body {
+  background-image:url('./starBackground.jpeg');
+  background-size:cover;
+  background-attachment: fixed; 
+  background-size:fill;
+  display:table;
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+
+* {
+  box-sizing:border-box;
+}
+.column {
+  float:left;
+  width:50%;
+}
+
+.row:after {
+  contents: "";
+  display: table;
+  clear: both;
+}
+
+p {
+  color:white;
+}
+
+a {
+  color:blue;
+}
+
+a:hover {
+  color:white;
+}
+
+button {
+  font-size:min(max(14pt, 1.5vw), 16pt);
+}
+
+div {
+  min-width:35ch;
+}
+
+/*Thanks to Kevin Powell on YouTube! */
+.grid-ish {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.grid-ish > * {
+  flex: 1 0 33%;
+}
+
+.WeighJupiter {
+  color:darkblue;
+  border: 1vw solid darkblue;
+  background-color:powderblue;
+  border-radius:5px;
+  padding:25px;
+}
+
+.WeighJupiterButton {
+  color:blue;
+  border: 0.05vw solid blue;
+  background-color:powderblue;
+  border-radius:5px;
+  padding:10px;
+}
+
+.WeighJupiterButton:hover {
+  color:powderblue;
+  background-color:blue;
+}
+
+.AstrSpectroscopy {
+  border: 1vw solid green;
+  background-color:lightgreen;
+  border-radius:5px;
+  padding:25px;
+}
+
+.AstrSpecButton {
+  color:darkgreen;
+  border: 0.05vw solid darkgreen;
+  background-color:lightgreen;
+  border-radius:5px;
+  padding:10px;
+}
+
+.AstrSpecButton:hover {
+  color:lightgreen;
+  background-color:#2e8b57;
+}
+
+.HubbleConstant {
+  border: 1vw solid red;
+  background-color:#ffa07a;
+  border-radius:5px;
+  padding:25px;
+}
+
+.HubbleConstButton {
+  color:maroon;
+  border: 0.05vw solid maroon;
+  background-color:#ffa07a;
+  border-radius:5px;
+  padding:10px;
+}
+
+.HubbleConstButton:hover {
+  color:#ffa07a;
+  background-color:maroon;
+}
+
+
+.ALEX {
+  border: 1vw solid darkorange;
+  color:black;
+  background-color:#ffc87c;
+  border-radius:5px;
+  padding:10px;
+}
+
+.ALEXButton {
+  color:maroon;
+  border: 0.05vw solid darkorange;
+  background-color:#ffc87c;
+  border-radius:5px;
+  padding:10px;
+}
+
+.ALEXButton:hover {
+  color:#ffc87c;
+  background-color:maroon;
+}
+
+footer {
+  margin-top:15px;
+  padding-bottom:0px;
+}
+
+body > footer {
+  display: table-row;
+}
+
+.footerButton {
+  margin-bottom:0;
+}
+
+</style>
+
+<script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
+<script src="plotly-2.11.1.min.js"></script>
+
+</head>
+
+<header>
+  <title>ALEX Labs Home</title>
+  <button class = "button biggerButton" onclick="mainPage()">Alex Garcia</button>
+</header>
+
+<body>
+<div class="body">
+
+   <div class="ALEX">
+
+   <h1 style="color:#ff7518;">ALEX</h1> 
+
+  <p style="color:black;">Welcome to <span style="color:#ff7518;">Astronomy Laboratory Exercises and eXperiments (ALEX)</span>! These experiments were originally designed for the use of University of Florida Astronomy 1022L course. <br><br> 
+
+  More generally, these labs are inspired by (and in some cases functionally very similar to) the Contemporary Lab Experiences in Astronomy (CLEA) Labs created by Gettysburg College. Those labs had been in use by the Florida Astronomy department for well over a decade before these labs came along. CLEA labs ceased operations around 2016. In the years following, some of the software became inoperable on UF's Windows 10 machines. <br><br>
+
+  Seeing the writing on the wall, as well as an opportunity to improve upon the formula these original labs had, I took it upon myself to reprogram some of these labs. The intent was to make them "future-proof". To that end, I programmed these labs in HTML/Javascript (as you can see). I make no claims of being an expert at either of these languages, but these labs are in a more stable place than when I started my TA position for this course. <br><br>
+
+  The labs that I have programmed are <span style="color:blue;">You Can Weigh Jupiter</span> (based on the CLEA lab of the same name), <span style="color:green">Astronomical Spectroscopy II</span> (based on "The Flow Of Energy Out Of The Sun" by CLEA), and <span style="color:crimson">Measuring the Hubble Constant</span> (based on the CLEA lab of the same name).</p>
+
+  <div class="mobile">
+    <p style="color:black;"><span style="color:white;font-size:24pt;">Note that these labs are intended to be used on a desktop</span><br> (i.e. the Windows 10 computers in Bryant Space Science Center Room 7). I've made some adjustments to make it more universally friendly (pun intended), but there's only so much I can do with some labs. </p>
+  </div>
+  <div class="desktop">
+    <p style="color:black;"> Note that these labs are intended to be used on a desktop (i.e. the Windows 10 computers in Bryant Space Science Center Room 7). I've made some adjustments to make it more universally friendly (pun intended), but there's only so much I can do with some labs. </p>
+  </div>
+
+  <p style="color:black;">This is a project that I find very exciting and rewarding to work on. It is still a work in progress, and I may add more CLEA labs as I have time, but this is functional for the Astronomy course at UF. </p>
+
+  <h2 style="color:#ff7518;">Usage of ALEX</h2>
+
+  <p style="color:black;">All ALEX lab software is publicly available via Github (link coming soon) and is free to use. I only ask that if you do use these labs in any capacity that you cite it appropriately and email me at <a href="mailto:alexgarcia@ufl.edu">alexgarcia@ufl.edu</a> (I would love to hear that my work is helping your program)! </p>
+  </div>
+
+  <div class="grid-ish">
+
+  <div class="WeighJupiter col">
+
+  <h2 style="color:blue;">You Can Weigh Jupiter</h2>
+
+  <p style="color:darkblue;">How do Astronomers know how much the planets weigh? Wonder no more! This lab explores this very question with the motions of Jupiter's most famous moons: Io, Europa, Callisto and Ganymede. <br><br>
+  
+  Watch and measure as the moons orbit around Jupiter. With the measurements of the size of the orbits, their timing, and knowledge of Kepler's Laws, we can ascertain the mass of Jupiter!
+  </p>
+
+  <button class="WeighJupiterButton" onclick=Jupiter()>Weigh Jupiter </button>
+
+  </div>
+
+  <div class="AstrSpectroscopy col">
+  <h2 style="color:darkgreen;">Astronomical Spectroscopy II</h2>
+
+  <p style="color:black;">Have you ever wondered by visible light is visible? Why does the Sun appears yellow? <br><br>
+
+  The answers lie in Spectroscopy and Blackbody radiation, the subjects of this lab. We predict what the temperature of the Sun is and what it is made of. This lab, a digital follow-up to the physical lab Astronomical Spectroscopy I, provides theoretical background through the example of the Sun. 
+  </p>
+
+  <button class="AstrSpecButton" onclick=AstrSpecII()>Examine the Sun </button>
+
+  </div>
+
+  <div class="HubbleConstant col">
+  <h2 style="color:maroon;">Measuring the Hubble Constant</h2>
+
+  <p style="color:darkred">Astronomers all agree, the Universe is expanding. How are we so certain? The answer actually takes us back to spectroscopy! <br><br>
+
+  Looking at the Calcium H and K lines (at 3969 and 3934 Angstroms, respectively), we can generate spectra of the most distant galaxies. There's only one problem... the lines are not where we expect them to be! In fact, they move towards longer wavelengths the further away we look in our universe. Enter the Hubble-Lemaître law.
+  </p>
+
+  <button class="HubbleConstButton" onclick=Hubble()>Measure the Hubble Constant </button>
+
+  </div>
+
+</div>
+
+<div class="ALEX">
+
+  <h1 style="color:#ff7518;">Helpful Functions</h1> 
+
+  <p style="color:black">In addition, I created some useful helper functions for different parts of the course. Since these all existed anyway, I decided to include them here. </p>
+
+  <button class="ALEXButton" onclick=unitConversions()>Basic Unit Conversions</button>
+  <br><br>
+  <button class="ALEXButton" onclick=distanceModulus()>Distance Modulus Calculator</button>
+  <br><br>
+  <button class="ALEXButton" onclick=energy2WL()>Energy and Wavelength Conversion</button>
+
+</div>
+
+  <footer style="margin-bottom:0px;">
+    <button class="button biggerButton footerButton" onclick=backgroundImage()>About the background image </button>
+  </footer>
+
+</body>
+
+<script>
+
+function energy2WL() {
+  window.open("energyWavelength.html",target="_self");
+}
+
+function distanceModulus() {
+  window.open("distanceModulus.html",target="_self");
+}
+
+function unitConversions() {
+  window.open("unitConversions.html",target="_self");
+}
+
+function backgroundImage() {
+  window.open("backgroundExplain.html",target="_self");
+}
+
+function mainPage() {
+  window.open("../index.html",target="_self");
+}
+
+function contactAlex() {
+  window.open("../contactMe.html",target="_self");
+}
+
+function Jupiter() {
+  window.open("./WeighJupiter/YouCanWeighJupiter.html", target="_self");
+}
+
+function AstrSpecII() {
+  window.open("./SpectroscopyII/AstronomicalSpectroscopyII.html", target="_self");
+}
+
+function Hubble() {
+  window.open("./Hubble/Hubble.html",target="_self");
+}
+
+</script>
+
+</html>
