@@ -49,6 +49,8 @@ ALEX Labs were inspired and originally based off of the Contemporary Labortory E
 
 I would also like to acknowledge Dr. Paul Sell for his comments on improvements in both physical accuracy and lab functionality for nearly all of the labs in ALEX.
 
+Several images in this lab were taken directly from NASA websites and galleries. All image credits are given in appropriate places in their respective labs, please see each lab for respective credits and please contact me if you believe there to be an issue.
+
 ## Version 1.0 -- August 18th, 2022
 
 The ALEX labs are officially ready for student usage!
