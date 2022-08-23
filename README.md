@@ -68,3 +68,4 @@ I anticipate needing to update *something* before students get their hands on it
 ### Needs to be added to the next version
 
 - Instructions (.pdf files) on how to use each lab along with a rough sketch of the worksheet associated with the lab 
+- Color blind modes for all labs

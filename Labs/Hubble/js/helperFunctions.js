@@ -17,6 +17,8 @@ tinyInc.style.backgroundColor = "darkgray";
 function inc(newIncrement) {
   newIncrement = parseInt(newIncrement);
 
+  increment = newIncrement;
+
   if (newIncrement == RAPID) {
     bigInc.style.backgroundColor = 'white';
     smallInc.style.backgroundColor = 'darkgray';
