@@ -55,7 +55,7 @@ Several images in this lab were taken directly from NASA websites and galleries.
 
 Note: functionally, this release is virtually the same as v1.0
 
-## New in this version
+### New in this version
 
 - Created subfiles for `js` and `css` scripts to make `html` files easier to parse
 - Minor changes to style in "Astronomical Spectroscopy"
