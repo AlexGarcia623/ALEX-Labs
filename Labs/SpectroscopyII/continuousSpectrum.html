@@ -17,12 +17,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-<style>
-span {
-  font-size: min(max(14pt, 1.5vw), 16pt);
-}
-</style>
-
 <script>
 function SpecHome() {
   window.open('AstronomicalSpectroscopy.html', '_self');
@@ -49,10 +43,13 @@ function SpecHome() {
     <canvas class="center" id="canvas" height="500" width="750"></canvas> <br>
     <input type="button" onclick="start()" value="Start!" class="center" />
 
-    <div class="AstrSpectroscopy center" style="background-color:black;">
+    <div class="AstrSpectroscopy center">
 
-      <p><b><span style="color:darkgreen;">Number of walks:</span> <span id="display"> </span><br> <span id="finish"
-            style="color:darkgreen;"></span> <span id='WL'> </span><b></p>
+      <p><b><span>Number of walks:</span> <span id="display"> </span><br><br>
+
+         <span id="finish"></span> <span id='WL'> </span><b>
+
+      </p>
 
     </div>
 
