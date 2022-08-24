@@ -9,6 +9,9 @@ var JUPITER_DAY = 10; // Hours
 
 var TIME_PER_FRAME = JUPITER_DAY / NUMBER_OF_FRAMES;
 
+var DESIRED_TIME = 0.75; // Get desired number of hours from slider
+var NUM_ITER = Math.round(DESIRED_TIME / TIME_PER_FRAME); // how many frames to advance by
+
 // Slider for the timestep
 var slider = document.getElementById("myRange");
 var output = document.getElementById("desired");
@@ -50,3 +53,5 @@ var GANYMEDEy = 0;
 
 var CALLISTOx = 0;
 var CALLISTOy = 0;
+
+var JW = 105/SCALE;

@@ -57,3 +57,14 @@ function calcCallistoPos(JW) {
     y = a * Math.sin((2 * Math.PI) * time / CALLISTO_PERIOD);
     return [x, y];
 }
+
+// Displays modal with information on which moon is which
+function whichIsWhich() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+window.onclick = function (event) {
+    if (event.target == document.getElementById("myModal")) {
+        document.getElementById("myModal").style.display = "none"
+    }
+}
