@@ -1,4 +1,4 @@
-# ALEX-Labs v-1.0
+# ALEX-Labs v-1.0.1
 
 Welcome to Astronomy Laboratory Exercises and eXperiments (ALEX)!
 
@@ -51,6 +51,21 @@ I would also like to acknowledge Dr. Paul Sell for his comments on improvements 
 
 Several images in this lab were taken directly from NASA websites and galleries. All image credits are given in appropriate places in their respective labs, please see each lab for respective credits and please contact me if you believe there to be an issue.
 
+## Version 1.0.1 -- August 23rd, 2022
+
+Note: functionally, this release is virtually the same as v1.0
+
+## New in this version
+
+- Created subfiles for `js` and `css` scripts to make `html` files easier to parse
+- Minor changes to style in "Astronomical Spectroscopy"
+  * Lab no longer named "Astronomical Spectroscopy II"
+
+### Needs to be added to the next version
+
+- Instructions (.pdf files) on how to use each lab along with a rough sketch of the worksheet associated with the lab 
+- Color blind modes for all labs
+
 ## Version 1.0 -- August 18th, 2022
 
 The ALEX labs are officially ready for student usage!
@@ -67,5 +82,4 @@ I anticipate needing to update *something* before students get their hands on it
 
 ### Needs to be added to the next version
 
-- Instructions (.pdf files) on how to use each lab along with a rough sketch of the worksheet associated with the lab 
-- Color blind modes for all labs
+- Clean-up code and other minor adjustments
