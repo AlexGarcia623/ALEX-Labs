@@ -39,7 +39,7 @@ function draw() {
     var repeats = parseInt(document.getElementById("repeats").value)
 
     if (isNaN(repeats)) {
-        repeats=1;
+        repeats = 1;
     }
 
     if (y > 300 || y < 115) {
@@ -52,20 +52,21 @@ function draw() {
             } else {
                 document.getElementById("finish").innerHTML = "No Photon Observed";
             }
-            
+
             if (number < repeats - 1) {
                 sleep(sleeptime);
                 restart();
             } else {
-                SLIDER_HIDDEN.style.display = 'block';                
+                SLIDER_HIDDEN.style.display = 'block';
                 document.getElementById("numEmit").innerHTML = TOTAL_EMIT;
                 document.getElementById("numObs").innerHTML = TOTAL_OBS;
                 if (animation) {
                     window.cancelAnimationFrame(animation)
                 }
+                going = false;
                 return;
             }
-            
+
         }
         pertx = 25 * Math.sin(theta);
         perty = -25 * Math.abs(Math.cos(theta));
@@ -96,6 +97,7 @@ function draw() {
             } else {
                 sleep(sleeptime)
                 SLIDER_HIDDEN.style.display = 'block';
+                going = false;
             }
         } else if (x + pertx < 0 || x - pertx > 750) {
             var np1 = number + 1;
@@ -111,6 +113,7 @@ function draw() {
                 if (animation) {
                     window.cancelAnimationFrame(animation)
                 }
+                going = false;
                 return;
             }
         } else {
@@ -126,21 +129,22 @@ function draw() {
     // document.getElementById('test').innerHTML = TOTAL_OBS + '/' + TOTAL_EMIT
     document.getElementById("numEmit").innerHTML = TOTAL_EMIT;
     document.getElementById("numObs").innerHTML = TOTAL_OBS;
-    
+
 }
 
 function start() {
+    going = true;
     document.getElementById('myRangeTitle').style.display = "none";
     document.getElementById('myRange').style.display = "none";
-    document.getElementById('whichGas').style.display="none";
-    document.getElementById('whichGasChoose').style.display="none";
+    document.getElementById('whichGas').style.display = "none";
+    document.getElementById('whichGasChoose').style.display = "none";
     document.getElementById('displayResult').style.display = "block";
     document.getElementById('resultsText').style.display = "block";
     document.getElementById('whichGasChosen').style.display = "block";
-    
+
     TOTAL_EMIT = 1;
     TOTAL_OBS = 0;
-    
+
     theta = 0;
     if (animation) {
         window.cancelAnimationFrame(animation)

@@ -60,10 +60,13 @@ function SpecHome() {
 
   </div>
 
+  <button onclick="colorBlindToggle()" id="cbBtn" title="Colorblind Mode" class="AstrSpecButton">Colorblind Mode</button>
+
   <canvas class="center" id="canvas" height="500" width="750"></canvas> <br>
-  <input class="center" id="repeats" type = "number" placeholder="# Photons" min="0" max="20"/> 
+  <input class="center" id="repeats" type = "number" placeholder="# Photons" min="0" max="20" oninput="checkNum()"/> 
  
-  <input type="button" onclick="start()" value="Start!" class="center"/>
+  <input type="button" onclick="start()" value="Start" class="center"/>
+  <input type="button" onclick="stop()" value="Stop" class="center" style="display:none;" id="stop"/>
  
   <div class="modal" id="myModal" style="display:none;min-width:50ch;">
     <div class="modalContent modalWhiteBckgrd center" style="width:60%;">
@@ -80,11 +83,15 @@ function SpecHome() {
 
   <div class="AstrSpectroscopy center" id = "contain2">
 
+    <p id="warning" style="color:red;display:none;text-align:center;">Warning: Max number of photons is 20</p>
+
     <div class="slidecontainer">
-      <h2>Energy: <span id="energy"></span> eV</h2>
-      <input type="range" min="1.6" max="3.5" value="2.5" step="0.1" class="slider" id="myRange">
+      <h2>Energy: <span id="energy"></span> eV <span id="color" style="display:none;"></span></h2>
+      <input type="range" min="1.6" max="3.5" value="2.5" step="0.1" class="slider" id="myRange" oninput="sliderInput()">
     </div>
     <h2 id="myRangeTitle">Use this slider to set the photon energy</h2>
+
+    
 
     <h2 style="text-align:left;display:none;" id="resultsText">Results:</h2>
     
@@ -122,6 +129,7 @@ function SpecHome() {
 <script src="./js/wavelengthToColor.js"></script>
 <script src="./js/absorptionSpectra.js"></script>
 <script src="./js/absorptionSpectraConstants.js"></script>
+<script src="./js/hotKeys.js"></script>
 <script>
 // Get all options for gasses (i.e. Mystery1, Mystery2...)
 var options = document.getElementById('whichGas').selectedOptions;
@@ -155,9 +163,10 @@ document.getElementById("contain1").style.borderColor = color;
 document.getElementById("contain2").style.borderColor = color;
 
 // Change the wavelegth on slider change
-slider.oninput = function() {
-  output.innerHTML = this.value;
-  var WL = wavelengtheVConverter(document.getElementById("energy").innerHTML);
+function sliderInput() {
+  output.innerHTML = slider.value;
+  var energy = document.getElementById("energy").innerHTML
+  var WL = wavelengtheVConverter(energy);
   var color = wavelengthToColor(WL);    
 
   document.getElementById("energy").style.color = color; 
@@ -168,6 +177,9 @@ slider.oninput = function() {
   document.getElementById("displayResult").style.display = "none";
   document.getElementById("number").innerHTML = "";
   document.getElementById("finish").innerHTML = "";
+
+  document.getElementById('color').innerHTML = COLORS[energy];
+  document.getElementById('color').style.color = color;
   for (var i = 1; i < parseInt(document.getElementById("repeats").value); ++i) {
       s1 = "prev" + String(i);
       s2 = "prevNum" + String(i);
@@ -187,6 +199,29 @@ window.onclick = function(event) {
 function showReference() {
   refDiv = document.getElementById("myModal")
   refDiv.style.display = refDiv.style.display != 'none' ? 'none' : 'block';
+}
+
+function colorBlindToggle() {
+  var energy = document.getElementById("energy").innerHTML
+  var WL = wavelengtheVConverter(energy);
+  var color = wavelengthToColor(WL);  
+
+  document.getElementById('color').innerHTML = COLORS[energy];
+  document.getElementById('color').style.color = color;
+
+  var COLOR_DISPLAY = document.getElementById('color');
+  COLOR_DISPLAY.style.display = COLOR_DISPLAY.style.display == "none" ? "block" : "none"; 
+}
+
+function checkNum() {
+  var repeatsInput = document.getElementById('repeats');
+  var warning = document.getElementById('warning');
+  if (repeatsInput.value > 20) {
+    warning.style.display = warning.style.display == "none" ? "block" : "none";
+    // document.getElementById('warning').innerHTML = 'Max number of photons is 20'
+  } else {
+    warning.style.display = "none";
+  }
 }
 </script>
 
