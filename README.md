@@ -1,4 +1,4 @@
-# ALEX-Labs v-1.0.1
+# ALEX-Labs v-1.1
 
 Welcome to Astronomy Laboratory Exercises and eXperiments (ALEX)!
 
@@ -51,6 +51,23 @@ I would also like to acknowledge Dr. Paul Sell for his comments on improvements 
 
 Several images in this lab were taken directly from NASA websites and galleries. All image credits are given in appropriate places in their respective labs, please see each lab for respective credits and please contact me if you believe there to be an issue.
 
+## Version 1.1 -- August 25th, 2022
+
+### New in this version
+
+- Added colorblind friendly modes to the following color-based labs:
+  * You Can Weigh Jupiter
+    - Continuous Orbits
+    - Timestep Orbits
+  * Astronomical Spectroscopy
+    - Absorption Spectra
+- Added keyboard shortcuts for "Astronomical Spectroscopy: Absorption Spectra"
+
+### Needs to be added to the next version
+
+- Instructions (.pdf files) on how to use each lab along with a rough sketch of the worksheet associated with the lab 
+- Any other colorblind friendly implementations possible
+
 ## Version 1.0.1 -- August 23rd, 2022
 
 Note: functionally, this release is virtually the same as v1.0
@@ -63,7 +80,6 @@ Note: functionally, this release is virtually the same as v1.0
 
 ### Needs to be added to the next version
 
-- Instructions (.pdf files) on how to use each lab along with a rough sketch of the worksheet associated with the lab 
 - Color blind modes for all labs
 
 ## Version 1.0 -- August 18th, 2022
