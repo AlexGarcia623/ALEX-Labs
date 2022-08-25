@@ -3,6 +3,7 @@ function init() {
 }
 
 function draw() {
+    var SLIDER_HIDDEN = document.getElementById('myRange');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     ctx.strokeStyle = 'green';
@@ -37,6 +38,10 @@ function draw() {
 
     var repeats = parseInt(document.getElementById("repeats").value)
 
+    if (isNaN(repeats)) {
+        repeats=1;
+    }
+
     if (y > 300 || y < 115) {
         if (y < 30) {
             var np1 = number + 1;
@@ -44,16 +49,23 @@ function draw() {
             if (x > 235 && x < 515) {
                 document.getElementById("finish").innerHTML = "Photon Observed";
                 TOTAL_OBS += 1;
-                document.getElementById("numObs").innerHTML = TOTAL_OBS;
             } else {
                 document.getElementById("finish").innerHTML = "No Photon Observed";
             }
-
+            
             if (number < repeats - 1) {
                 sleep(sleeptime);
                 restart();
+            } else {
+                SLIDER_HIDDEN.style.display = 'block';                
+                document.getElementById("numEmit").innerHTML = TOTAL_EMIT;
+                document.getElementById("numObs").innerHTML = TOTAL_OBS;
+                if (animation) {
+                    window.cancelAnimationFrame(animation)
+                }
+                return;
             }
-            return;
+            
         }
         pertx = 25 * Math.sin(theta);
         perty = -25 * Math.abs(Math.cos(theta));
@@ -82,7 +94,8 @@ function draw() {
                 sleep(sleeptime);
                 restart();
             } else {
-                return;
+                sleep(sleeptime)
+                SLIDER_HIDDEN.style.display = 'block';
             }
         } else if (x + pertx < 0 || x - pertx > 750) {
             var np1 = number + 1;
@@ -92,6 +105,12 @@ function draw() {
                 sleep(sleeptime);
                 restart();
             } else {
+                SLIDER_HIDDEN.style.display = 'block';
+                document.getElementById("numEmit").innerHTML = TOTAL_EMIT;
+                document.getElementById("numObs").innerHTML = TOTAL_OBS;
+                if (animation) {
+                    window.cancelAnimationFrame(animation)
+                }
                 return;
             }
         } else {
@@ -104,14 +123,24 @@ function draw() {
         y += perty;
         ctx.stroke();
     }
+    // document.getElementById('test').innerHTML = TOTAL_OBS + '/' + TOTAL_EMIT
     document.getElementById("numEmit").innerHTML = TOTAL_EMIT;
     document.getElementById("numObs").innerHTML = TOTAL_OBS;
-    document.getElementById("displayResult").style.display = block;
+    
 }
 
 function start() {
+    document.getElementById('myRangeTitle').style.display = "none";
+    document.getElementById('myRange').style.display = "none";
+    document.getElementById('whichGas').style.display="none";
+    document.getElementById('whichGasChoose').style.display="none";
+    document.getElementById('displayResult').style.display = "block";
+    document.getElementById('resultsText').style.display = "block";
+    document.getElementById('whichGasChosen').style.display = "block";
+    
     TOTAL_EMIT = 1;
     TOTAL_OBS = 0;
+    
     theta = 0;
     if (animation) {
         window.cancelAnimationFrame(animation)
