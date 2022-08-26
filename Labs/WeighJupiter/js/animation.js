@@ -58,7 +58,18 @@ function drawMoonsInit(y, h) {
     if ((IOx > (canvas.width / 2 - JupiterWidth) && IOx < (canvas.width / 2 + JupiterWidth)) && (IOy > 0)) {
         // do nothing
     } else {
-        context.arc(IOx, dispY + 2, 0.75, 0, 2 * Math.PI, true);
+        if (COLOR_BLIND) {
+            context.moveTo(IOx - 2.5, dispY + 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY + 4*2.5/3 + 1);
+            context.moveTo(IOx + 2.5, dispY + 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY + 4*2.5/3 + 1);
+        } else {
+            context.arc(IOx, dispY + 2, 0.75, 0, 2 * Math.PI, true);
+        }
         context.stroke();
     }
 
@@ -73,10 +84,10 @@ function drawMoonsInit(y, h) {
         // do nothing
     } else {
         if (COLOR_BLIND) {
-            context.moveTo(EUROPAx - 3, dispY);
-            context.lineTo(EUROPAx + 3, dispY);
-            context.lineTo(EUROPAx - 3, dispY);
-            context.lineTo(EUROPAx + 3, dispY);
+            context.moveTo(EUROPAx - 1, dispY + 1);
+            context.lineTo(EUROPAx, dispY + 2);
+            context.lineTo(EUROPAx + 1, dispY + 1);
+            context.lineTo(EUROPAx, dispY);
             context.closePath();
         } else {
             context.arc(EUROPAx, dispY - 1, 0.75, 0, 2 * Math.PI, true);
@@ -140,7 +151,18 @@ function drawMoonsWShadow(y, h) {
     if ((IOx > (canvas.width / 2 - JupiterWidth) && IOx < (canvas.width / 2 + JupiterWidth)) && (IOy > 0)) {
         // do nothing
     } else {
-        context.arc(IOx, dispY + 2, 0.75, 0, 2 * Math.PI, true);
+        if (COLOR_BLIND) {
+            context.moveTo(IOx - 2.5, dispY + 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY + 4*2.5/3 + 1);
+            context.moveTo(IOx + 2.5, dispY + 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY + 4*2.5/3 + 1);
+        } else {
+            context.arc(IOx, dispY + 2, 0.75, 0, 2 * Math.PI, true);
+        }
         context.stroke();
     }
 
@@ -154,7 +176,18 @@ function drawMoonsWShadow(y, h) {
     if ((IOx > (canvas.width / 2 - JupiterWidth) && IOx < (canvas.width / 2 + JupiterWidth)) && (IOy > 0)) {
         // do nothing
     } else {
-        context.arc(IOx, dispY + 2, 0.75, 0, 2 * Math.PI, true);
+        if (COLOR_BLIND) {
+            context.moveTo(IOx - 2.5, dispY + 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY + 4*2.5/3 + 1);
+            context.moveTo(IOx + 2.5, dispY + 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx - 2.5, dispY - 4*2.5/3 + 1);
+            context.lineTo(IOx + 2.5, dispY + 4*2.5/3 + 1);
+        } else {
+            context.arc(IOx, dispY + 2, 0.75, 0, 2 * Math.PI, true);
+        }
         context.stroke();
     }
 
@@ -166,10 +199,10 @@ function drawMoonsWShadow(y, h) {
         // do nothing
     } else {
         if (COLOR_BLIND) {
-            context.moveTo(EUROPAx - 3, dispY);
-            context.lineTo(EUROPAx + 3, dispY);
-            context.lineTo(EUROPAx - 3, dispY);
-            context.lineTo(EUROPAx + 3, dispY);
+            context.moveTo(EUROPAx - 1, dispY + 1);
+            context.lineTo(EUROPAx, dispY + 2);
+            context.lineTo(EUROPAx + 1, dispY + 1);
+            context.lineTo(EUROPAx, dispY);
             context.closePath();
         } else {
             context.arc(EUROPAx, dispY - 1, 0.75, 0, 2 * Math.PI, true);
@@ -188,10 +221,10 @@ function drawMoonsWShadow(y, h) {
         // do nothing
     } else {
         if (COLOR_BLIND) {
-            context.moveTo(EUROPAx - 3, dispY);
-            context.lineTo(EUROPAx + 3, dispY);
-            context.lineTo(EUROPAx - 3, dispY);
-            context.lineTo(EUROPAx + 3, dispY);
+            context.moveTo(EUROPAx - 1, dispY + 1);
+            context.lineTo(EUROPAx, dispY + 2);
+            context.lineTo(EUROPAx + 1, dispY + 1);
+            context.lineTo(EUROPAx, dispY);
             context.closePath();
         } else {
             context.arc(EUROPAx, dispY - 1, 0.75, 0, 2 * Math.PI, true);
