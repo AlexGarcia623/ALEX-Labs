@@ -1,4 +1,4 @@
-# ALEX-Labs v-1.1
+# ALEX-Labs v-1.2
 
 Welcome to Astronomy Laboratory Exercises and eXperiments (ALEX)!
 
@@ -10,9 +10,11 @@ These labs were based on the Contemporary Labortory Experiences in Astronomy (CL
  - You Can Weigh Jupiter
  - Astronomical Spectroscopy
    * Fraunhofer Lines from the Sun
-   * Understanding the Blackbody
    * Absorption Spectra 
  - Measure the Hubble Constant
+ - How Hot Is The Sun?
+ - Space Weather
+   * Links for online version of this lab
 
 Other tools inside ALEX Labs:
  - Basic Unit Converter
@@ -37,7 +39,7 @@ Thus, the University of Florida Astronomy 1022L course gained its independence o
 
 ## Do you plan to create more labs?
 
-Maybe. I have been tossing around the idea of creating more labs, but certainly not anytime soon (no sooner than January 2023). I would love to hear thoughts on different things that could be implemented and might be useful to similarly structured courses.
+No, after Spring 2023 I no longer attend the University of Florida!
 
 ## Acknowledgements
 
@@ -45,11 +47,22 @@ ALEX Labs were inspired and originally based off of the Contemporary Labortory E
 
 "You Can Weigh Jupiter" and "Measure the Hubble Constant" are nearly direct adaptations of the CLEA Labs of the same name. Minor changes, both in functionality and overall scope, were implemented for ALEX Labs, but as a whole they functional nearly identically to the CLEA Labs.
 
-"Astronomical Spectroscopy: Absorption Spectra" is inspired by part of the CLEA Lab "The Flow of Energy Out of the Sun". The rest of "Astronomical Spectroscopy" (i.e. "Fraunhofer Lines from the Sun" and "Understanding the Blackbody") arose naturally from the methology in which instructors taught the Astronomy 1022L course. 
-
-I would also like to acknowledge Dr. Paul Sell for his comments on improvements in both physical accuracy and lab functionality for nearly all of the labs in ALEX.
+"Astronomical Spectroscopy: Absorption Spectra" is inspired by part of the CLEA Lab "The Flow of Energy Out of the Sun". The rest of "Astronomical Spectroscopy" (i.e. "Fraunhofer Lines from the Sun" and "Understanding the Blackbody", the latter is now "How Hot is the Sun?") arose naturally from the methology in which instructors taught the Astronomy 1022L course. 
 
 Several images in this lab were taken directly from NASA websites and galleries. All image credits are given in appropriate places in their respective labs, please see each lab for respective credits and please contact me if you believe there to be an issue.
+
+I would also like to acknowledge Dr. Paul Sell for his comments on improvements in both physical accuracy and lab functionality for nearly all of the labs in ALEX. Similarly, I would like to thank Dr. Triana Almeyda for her suggestsions and thoughts on what works well/does not work well on the new and improved version of the labs.
+
+Finally, I would like to thank all the students I taught in 1022! All of this hard work was for you guys, I hope your interest in Astronomy continues well beyond my course! Thanks :)
+
+## Version 1.2 -- April 5th, 2023
+
+### New in this versions
+
+- Moved "Astronomical Spectroscopy: Understanding the Blackbody" to "How How is the Sun?" lab (portion of the new "The Sun" lab)
+- Updated keyboard shortcuts to "Measuring the Hubble Constant"
+
+There is a non-zero chance this is the last update (maybe ever)!
 
 ## Version 1.1 -- August 25th, 2022
 
