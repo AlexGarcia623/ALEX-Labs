@@ -1,4 +1,4 @@
-# ALEX-Labs v-1.2
+# ALEX-Labs
 
 Welcome to Astronomy Laboratory Exercises and eXperiments (ALEX)!
 
