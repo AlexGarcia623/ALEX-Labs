@@ -55,14 +55,20 @@ I would also like to acknowledge Dr. Paul Sell for his comments on improvements 
 
 Finally, I would like to thank all the students I taught in 1022! All of this hard work was for you guys, I hope your interest in Astronomy continues well beyond my course! Thanks :)
 
+## Final Version -- May 7th, 2023
+
+### New in this version
+
+- Minor quality of life upgrades (i.e., pop-ups now in the canvas elements).
+
+This is (extremely) likely the final version that will be released for this. Any update requests should be sent to my email (linked on Github), and I will attempt to get to them as soon as possible.
+
 ## Version 1.2 -- April 5th, 2023
 
-### New in this versions
+### New in this version
 
 - Moved "Astronomical Spectroscopy: Understanding the Blackbody" to "How How is the Sun?" lab (portion of the new "The Sun" lab)
 - Updated keyboard shortcuts to "Measuring the Hubble Constant"
-
-There is a non-zero chance this is the last update (maybe ever)!
 
 ## Version 1.1 -- August 25th, 2022
 
