@@ -13,8 +13,8 @@ These labs were based on the Contemporary Laboratory Experiences in Astronomy (C
    * Absorption Spectra 
  - Measure the Hubble Constant
  - How Hot Is The Sun?
- - Space Weather
-   * Links for the online version of this lab
+ - The Atmosphere of the Sun
+   * Links for the online version of this lab 
 
 Other tools inside ALEX Labs:
  - Basic Unit Converter
@@ -26,8 +26,7 @@ Other tools inside ALEX Labs:
 ## Usage of ALEX Labs
 
 The ALEX software is free to use as you like! I just ask that you cite the work appropriately.
-And, if you do end up using the material, please let me know! I'd love to hear how my work is helping your program.
-You can contact me at alexmgarcia623@gmail.com
+And, if you do end up using the material, please let me know! I'd love to hear how my work is helping your program (email linked on Github).
 
 ## Why do ALEX Labs exist?
 
@@ -35,11 +34,11 @@ This software was originally created in response to a simple issue: two of the t
 
 "The Flow of Energy Out of the Sun" and "Measure the Hubble Constant" CLEA Labs used in the lab course were prioritized. These labs were the biggest culprits of the Windows 10 non-functionality. While testing the waters on my ability to recreate these labs, I came to the conclusion that implementing all three CLEA labs could be recreated within my skill set.
 
-Thus, the University of Florida Astronomy 1022L course gained its independence of the CLEA software. An added perk in this process is the projected longevity of these exercises. The CLEA Labs suffered as they aged since they were written in a language that, apparently, became obsolete several years down the road. ALEX Labs, developed in HTML/JS/CSS, aims to avoid this problem entirely by being entirely web-based, open-source, and in languages familiar to non-software developers.
+Thus, the University of Florida Astronomy 1022L course gained its independence from the CLEA software. An added perk in this process is the projected longevity of these exercises. The CLEA Labs suffered as they aged since they were written in a language that, apparently, became obsolete several years down the road. ALEX Labs, developed in HTML/JS/CSS, aims to avoid this problem entirely by being entirely web-based, open-source, and in languages familiar to non-software developers.
 
 ## Do you plan to create more labs?
 
-No, after Spring 2023 I no longer attend the University of Florida!
+Nope! I no longer attend the University of Florida -- unless some enterprising graduate student of the future takes up the challenge, I will no longer be updating/adding to these
 
 ## Acknowledgements
 
@@ -55,11 +54,15 @@ I would also like to acknowledge Dr. Paul Sell for his comments on improvements 
 
 Finally, I would like to thank all the students I taught in 1022! All of this hard work was for you guys, I hope your interest in Astronomy continues well beyond my course! Thanks :)
 
-## Final Version -- May 7th, 2023
+## Final Version -- May 7th/June 18th, 2023
 
 ### New in this version
 
 - Minor quality of life upgrades (i.e., pop-ups now in the canvas elements).
+- Renamed labs as appropriate
+  * Space Weather -> The Atmosphere of the Sun
+  * Astronomical Spectroscopy: The Blackbody -> How Hot is the Sun?
+- Added lab manuals containing information regarding each lab
 
 This is (extremely) likely the final version that will be released for this. Any update requests should be sent to my email (linked on Github), and I will attempt to get to them as soon as possible.
 
