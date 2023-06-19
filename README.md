@@ -22,6 +22,9 @@ Other tools inside ALEX Labs:
    * This is useful for the "Measure the Hubble Constant" Lab
  - Energy and Wavelength Converter
    * This is useful for the "Astronomical Spectroscopy: Absorption Spectra" Lab
+
+Lab Manuals:
+- Versions of the manuals used in the Fall 2023 version of the course are attached for your convenience. Please note that these are not up to date for the Astronomy 1022 course at the University of Florida
  
 ## Usage of ALEX Labs
 
